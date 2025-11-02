@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\VANTARA\PROJECTS\DS18b20_tempsensor\ds18b20_F401RE\ds18b20"/>
+			<item value="C:\Users\Admin\Desktop\Test project\stm32wl_ds18b20"/>
+			<item value="C:\Users\Admin\Desktop\Test project\stm32wl_ds18b20\stm32wl_ds18b20_temp"/>
+		</list>
+	</section>
+</section>

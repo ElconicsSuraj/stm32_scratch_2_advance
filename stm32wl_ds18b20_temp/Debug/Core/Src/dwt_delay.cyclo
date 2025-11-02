@@ -1,0 +1,2 @@
+../Core/Src/dwt_delay.c:3:6:DWT_Delay_Init	1
+../Core/Src/dwt_delay.c:27:6:delay_ms	2

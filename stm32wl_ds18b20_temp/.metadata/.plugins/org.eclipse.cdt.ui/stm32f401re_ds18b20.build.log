@@ -1,0 +1,10 @@
+16:49:36 **** Incremental Build of configuration Debug for project stm32f401re_ds18b20 ****
+make -j20 all 
+arm-none-eabi-size  stm32f401re_ds18b20.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33312	    468	   2052	  35832	   8bf8	stm32f401re_ds18b20.elf
+Finished building: default.size.stdout
+ 
+
+16:49:37 Build Finished. 0 errors, 0 warnings. (took 539ms)
+

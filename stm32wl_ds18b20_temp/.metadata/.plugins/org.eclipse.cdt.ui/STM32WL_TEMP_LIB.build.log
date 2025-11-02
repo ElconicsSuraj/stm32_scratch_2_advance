@@ -1,0 +1,10 @@
+14:59:16 **** Incremental Build of configuration Debug for project STM32WL_TEMP_LIB ****
+make -j20 all 
+arm-none-eabi-size  STM32WL_TEMP_LIB.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37704	    468	   2140	  40312	   9d78	STM32WL_TEMP_LIB.elf
+Finished building: default.size.stdout
+ 
+
+14:59:16 Build Finished. 0 errors, 0 warnings. (took 193ms)
+

@@ -1,0 +1,20 @@
+16:49:33 **** Incremental Build of configuration Debug for project stm32f401re_ds18b20 ****
+make -j20 all 
+arm-none-eabi-gcc -o "stm32f401re_ds18b20.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Admin\Desktop\Test project\stm32wl_ds18b20\stm32wl_ds18b20_temp\stm32f401re_ds18b20\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_ds18b20.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f401re_ds18b20.elf
+ 
+arm-none-eabi-size  stm32f401re_ds18b20.elf 
+arm-none-eabi-objdump -h -S stm32f401re_ds18b20.elf  > "stm32f401re_ds18b20.list"
+   text	   data	    bss	    dec	    hex	filename
+  33312	    468	   2052	  35832	   8bf8	stm32f401re_ds18b20.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f401re_ds18b20.list
+ 
+16:49:36 **** Incremental Build of configuration Debug for project stm32f401re_ds18b20 ****
+make -j20 all 
+arm-none-eabi-size  stm32f401re_ds18b20.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33312	    468	   2052	  35832	   8bf8	stm32f401re_ds18b20.elf
+Finished building: default.size.stdout
+ 

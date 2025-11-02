@@ -1,0 +1,4 @@
+1762075111122	Delete resource 'ds18b20'
+1762075113612	Delete resource 'STM32f401_temp_lib'
+1762075116230	Delete resource 'STM32WL_TEMP_LIB'
+1762083008556	Rename resource 'stm32f401re_ds18b20'
