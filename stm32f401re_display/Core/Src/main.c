@@ -133,7 +133,7 @@ int main(void)
   HD44780_Init(2);
   HD44780_Clear();
   HD44780_SetCursor(0,0);
-  HD44780_PrintStr("Welcome To CircuitGator HQ");
+  HD44780_PrintStr("Welcome To Elconics");
   int x;
   for(int x=0; x<100; x=x+1)
     {
