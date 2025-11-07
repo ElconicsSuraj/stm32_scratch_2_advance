@@ -1,0 +1,19 @@
+17:58:16 **** Incremental Build of configuration Debug for project stm32f401re_spi_sd_card_module_ ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../FATFS/Target -I../FATFS/App -I../Middlewares/Third_Party/FatFs/src -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'process_SD_card':
+../Core/Src/main.c:148:12: error: 'false' undeclared (first use in this function)
+  148 |   } while( false );
+      |            ^~~~~
+../Core/Src/main.c:27:1: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   26 | #include <string.h>
+  +++ |+#include <stdbool.h>
+   27 | 
+../Core/Src/main.c:148:12: note: each undeclared identifier is reported only once for each function it appears in
+  148 |   } while( false );
+      |            ^~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+
+17:58:16 Build Failed. 2 errors, 0 warnings. (took 246ms)
+

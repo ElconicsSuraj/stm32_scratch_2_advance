@@ -1,0 +1,15 @@
+../FATFS/Target/user_diskio.c:34:16:spi_xfer	32	static
+../FATFS/Target/user_diskio.c:41:13:spi_send_multi	16	static
+../FATFS/Target/user_diskio.c:46:13:spi_recv_multi	16	static
+../FATFS/Target/user_diskio.c:53:13:send_dummy_clocks	24	static
+../FATFS/Target/user_diskio.c:60:12:wait_ready	24	static
+../FATFS/Target/user_diskio.c:71:13:deselect_card	8	static
+../FATFS/Target/user_diskio.c:77:12:select_card	16	static
+../FATFS/Target/user_diskio.c:87:16:send_cmd	32	static
+../FATFS/Target/user_diskio.c:118:12:rcvr_datablock	32	static
+../FATFS/Target/user_diskio.c:138:12:xmit_datablock	24	static
+../FATFS/Target/user_diskio.c:159:9:USER_initialize	40	static
+../FATFS/Target/user_diskio.c:229:9:USER_status	16	static
+../FATFS/Target/user_diskio.c:236:9:USER_read	32	static
+../FATFS/Target/user_diskio.c:271:9:USER_write	32	static
+../FATFS/Target/user_diskio.c:310:9:USER_ioctl	24	static
