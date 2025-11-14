@@ -58,7 +58,11 @@ const osThreadAttr_t led_task_2_attributes = {
   .priority = (osPriority_t) osPriorityLow,
 };
 /* USER CODE BEGIN PV */
+
 osMutexId_t uartMutexHandle;
+osMessageQueueId_t myQueueHandle;
+osSemaphoreId_t buttonSemHandle;
+
 
 /* USER CODE END PV */
 
@@ -122,9 +126,10 @@ int main(void)
     .name = "uartMutex"
   };
   uartMutexHandle = osMutexNew(&uartMutex_attributes);
-  /* USER CODE END RTOS_MUTEX */
 
-  /* add mutexes, ... */
+  myQueueHandle = osMessageQueueNew(5, sizeof(uint16_t), NULL);
+
+  buttonSemHandle = osSemaphoreNew(1, 0, NULL);
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
@@ -282,11 +287,26 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if (GPIO_Pin == GPIO_PIN_13)
+    {
+        osSemaphoreRelease(buttonSemHandle);   // Signal the task
+    }
+}
+
+
+
 
 /* USER CODE END 4 */
 
@@ -300,20 +320,42 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
+	  uint16_t msg = 100;   // sample data
   /* Infinite loop */
   for(;;)
   {
+
+
+
+//Normal task function
+
 //	  HAL_UART_Transmit(&huart2, "task 1 \n",9,20);
 //
 //      osDelay(1000);
 
-      osMutexAcquire(uartMutexHandle, osWaitForever);   // LOCK
 
-      HAL_UART_Transmit(&huart2, (uint8_t*)"task 1 \n", 8, 20);
+//Mutex
+//      osMutexAcquire(uartMutexHandle, osWaitForever);   // LOCK
+//
+//      HAL_UART_Transmit(&huart2, (uint8_t*)"task 1 \n", 8, 20);
+//
+//      osMutexRelease(uartMutexHandle);                 // UNLOCK
+//
+//      osDelay(1000);
 
-      osMutexRelease(uartMutexHandle);                 // UNLOCK
 
-      osDelay(1000);
+//queue with mutex
+	  osMessageQueuePut(myQueueHandle, &msg, 0, 0);  // Send
+
+	    // (OPTIONAL) Debug UART
+	    osMutexAcquire(uartMutexHandle, osWaitForever);
+	    HAL_UART_Transmit(&huart2, (uint8_t*)"Task1 -> Sent to Queue\n", 23, 100);
+	    osMutexRelease(uartMutexHandle);
+
+	    msg++;
+
+	    osDelay(1000);
+
   }
   /* USER CODE END 5 */
 }
@@ -328,19 +370,51 @@ void StartDefaultTask(void *argument)
 void StartTask02(void *argument)
 {
   /* USER CODE BEGIN StartTask02 */
+	uint16_t rcvData;
   /* Infinite loop */
   for(;;)
   {
+
+//Noramal task
 //	  HAL_UART_Transmit(&huart2, "task 2 \n",9,20);
 //      osDelay(1000);
 
-      osMutexAcquire(uartMutexHandle, osWaitForever);   // LOCK
 
-      HAL_UART_Transmit(&huart2, (uint8_t*)"task 2 \n", 8, 20);
+//mutex
+//      osMutexAcquire(uartMutexHandle, osWaitForever);   // LOCK
+//
+//      HAL_UART_Transmit(&huart2, (uint8_t*)"task 2 \n", 8, 20);
+//
+//      osMutexRelease(uartMutexHandle);                 // UNLOCK
+//
+//      osDelay(1000);
 
-      osMutexRelease(uartMutexHandle);                 // UNLOCK
 
-      osDelay(1000);
+      //queue with mutex
+      if (osMessageQueueGet(myQueueHandle, &rcvData, NULL, osWaitForever) == osOK)
+      {
+          // Protect UART
+          osMutexAcquire(uartMutexHandle, osWaitForever);
+
+          char buffer[30];
+          int len = sprintf(buffer, "Task2 got: %d\r\n", rcvData);
+          HAL_UART_Transmit(&huart2, (uint8_t*)buffer, len, 100);
+
+          osMutexRelease(uartMutexHandle);
+      }
+      osDelay(10);
+
+//semaphore
+	    // Wait until interrupt gives semaphore
+	    osSemaphoreAcquire(buttonSemHandle, osWaitForever);
+
+	    // Print message
+	    osMutexAcquire(uartMutexHandle, osWaitForever);
+	    HAL_UART_Transmit(&huart2, (uint8_t*)"Button Pressed! (Semaphore)\n", 28, 100);
+
+	    osMutexRelease(uartMutexHandle);
+
+	    osDelay(50); // debounce
   }
   /* USER CODE END StartTask02 */
 }
