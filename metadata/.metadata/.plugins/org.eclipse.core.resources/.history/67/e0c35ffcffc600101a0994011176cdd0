@@ -155,14 +155,14 @@ data[buffer-1]='\n';
 	//	    HAL_Delay(500);
 	//
 	//}
-	     // Doing in DMA mode
-			if (tx_flag)
-			{     tx_flag = 0;
-	         HAL_UART_Transmit_DMA(&huart2,(uint8_t *)data, buffer);
-			}
 
-		     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-		     HAL_Delay(500);
+//			if (tx_flag)
+//			{     tx_flag = 0;
+//	         HAL_UART_Transmit_DMA(&huart2,(uint8_t *)data, buffer);
+//			}
+	                HAL_UART_Transmit_DMA(&huart2,(uint8_t *)data, buffer);
+				    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+				    HAL_Delay(1000);
 
   }
   /* USER CODE END 3 */

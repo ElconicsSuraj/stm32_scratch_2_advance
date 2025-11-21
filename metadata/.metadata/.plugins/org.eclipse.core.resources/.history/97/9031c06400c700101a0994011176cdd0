@@ -162,7 +162,7 @@ data[buffer-1]='\n';
 			}
 
 		     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-		     HAL_Delay(500);
+		     HAL_Delay(10);
 
   }
   /* USER CODE END 3 */

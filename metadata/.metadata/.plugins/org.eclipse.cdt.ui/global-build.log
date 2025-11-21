@@ -1,892 +1,297 @@
-15:47:43 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10724	     12	  11884	  22620	   585c	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-15:50:11 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+22:45:34 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10796	     12	  11884	  22692	   58a4	stm32f401re_uart_tx_it_dma.elf
+  12136	     16	   2760	  14912	   3a40	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-15:50:17 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10796	     12	  11884	  22692	   58a4	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-15:50:50 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+22:47:44 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10792	     12	  11884	  22688	   58a0	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-15:52:27 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:72:6: error: redefinition of 'HAL_UART_TxCpltCallback'
+   72 | void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:64:6: note: previous definition of 'HAL_UART_TxCpltCallback' with type 'void(UART_HandleTypeDef *)' {aka 'void(struct __UART_HandleTypeDef *)'}
+   64 | void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:192:13: error: invalid storage class for function 'MX_USART2_UART_Init'
-  192 | static void MX_USART2_UART_Init(void)
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:225:13: error: invalid storage class for function 'MX_GPIO_Init'
-  225 | static void MX_GPIO_Init(void)
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:274:1: error: expected declaration or statement at end of input
-  274 | }
-      | ^
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:54:13: warning: 'MX_GPIO_Init' used but never defined
-   54 | static void MX_GPIO_Init(void);
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:55:13: warning: 'MX_USART2_UART_Init' used but never defined
-   55 | static void MX_USART2_UART_Init(void);
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:265:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  265 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-../Core/Src/main.c:225:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
-  225 | static void MX_GPIO_Init(void)
-      |             ^~~~~~~~~~~~
-../Core/Src/main.c:192:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
-  192 | static void MX_USART2_UART_Init(void)
-      |             ^~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:145:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
-  145 | void SystemClock_Config(void)
-      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:161:55: error: 'size' undeclared (first use in this function); did you mean 'size_t'?
+  161 |                  HAL_UART_Transmit_DMA(&huart2, data, size);
+      |                                                       ^~~~
+      |                                                       size_t
+../Core/Src/main.c:161:55: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:161:49: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_DMA' differ in signedness [-Wpointer-sign]
+  161 |                  HAL_UART_Transmit_DMA(&huart2, data, size);
+      |                                                 ^~~~
+      |                                                 |
+      |                                                 char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:749:83: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit_DMA(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
+      |                                                                    ~~~~~~~~~~~~~~~^~~~~
 make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
 "make -j20 all" terminated with exit code 2. Build might be incomplete.
-15:52:36 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+22:48:01 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10776	     12	  11884	  22672	   5890	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-15:52:40 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10776	     12	  11884	  22672	   5890	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-15:53:27 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10764	     12	  11884	  22660	   5884	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-15:54:21 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10764	     12	  11884	  22660	   5884	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-15:54:36 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10764	     12	  11884	  22660	   5884	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-15:55:08 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10748	     12	  11884	  22644	   5874	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-15:55:16 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10748	     12	  11884	  22644	   5874	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-11:00:12 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10744	     12	   1668	  12424	   3088	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-11:00:52 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10744	     12	   1668	  12424	   3088	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-11:02:51 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:72:6: error: redefinition of 'HAL_UART_TxCpltCallback'
+   72 | void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:64:6: note: previous definition of 'HAL_UART_TxCpltCallback' with type 'void(UART_HandleTypeDef *)' {aka 'void(struct __UART_HandleTypeDef *)'}
+   64 | void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:121:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  121 |     HAL_UART_Transmit(&huart2, data,buffer, HAL_MAX_DELAY);
-      |                                ^~~~
-      |                                |
-      |                                char *
+../Core/Src/main.c:161:49: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_DMA' differ in signedness [-Wpointer-sign]
+  161 |                  HAL_UART_Transmit_DMA(&huart2, data, buffer);
+      |                                                 ^~~~
+      |                                                 |
+      |                                                 char *
 In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
                  from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
                  from ../Core/Inc/main.h:30,
                  from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:122:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  122 |     HAL_UART_Transmit(&huart2,"\n",2, HAL_MAX_DELAY);
-      |                               ^~~~
-      |                               |
-      |                               char *
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  11024	     12	   1668	  12704	   31a0	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-11:02:55 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11024	     12	   1668	  12704	   31a0	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-11:03:16 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:749:83: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  749 | HAL_StatusTypeDef HAL_UART_Transmit_DMA(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
+      |                                                                    ~~~~~~~~~~~~~~~^~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+22:49:30 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:121:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  121 |     HAL_UART_Transmit(&huart2, data,buffer, HAL_MAX_DELAY);
-      |                                ^~~~
-      |                                |
-      |                                char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:122:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  122 |     HAL_UART_Transmit(&huart2,"\n",1, HAL_MAX_DELAY);
-      |                               ^~~~
-      |                               |
-      |                               char *
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  11024	     12	   1668	  12704	   31a0	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-11:03:23 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11024	     12	   1668	  12704	   31a0	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-11:03:53 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+../Core/Src/main.c:72:6: error: redefinition of 'HAL_UART_TxCpltCallback'
+   72 | void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:64:6: note: previous definition of 'HAL_UART_TxCpltCallback' with type 'void(UART_HandleTypeDef *)' {aka 'void(struct __UART_HandleTypeDef *)'}
+   64 | void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+22:49:48 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:121:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  121 |     HAL_UART_Transmit(&huart2, data,buffer, HAL_MAX_DELAY);
-      |                                ^~~~
-      |                                |
-      |                                char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:122:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  122 |     HAL_UART_Transmit(&huart2,"\n",1, HAL_MAX_DELAY);
-      |                               ^~~~
-      |                               |
-      |                               char *
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  11016	     12	   1668	  12696	   3198	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-11:04:48 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+22:49:56 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+make -j20 all 
+arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
+Finished building: default.size.stdout
+ 
+22:50:54 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:121:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  121 |     HAL_UART_Transmit(&huart2, data,buffer, HAL_MAX_DELAY);
-      |                                ^~~~
-      |                                |
-      |                                char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:122:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  122 |     HAL_UART_Transmit(&huart2,"\n",1, HAL_MAX_DELAY);
-      |                               ^~~~
-      |                               |
-      |                               char *
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  11088	     12	   1668	  12768	   31e0	stm32f401re_uart_tx_it_dma.elf
+  13244	     16	   2760	  16020	   3e94	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-11:04:52 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+22:50:58 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  11088	     12	   1668	  12768	   31e0	stm32f401re_uart_tx_it_dma.elf
+  13244	     16	   2760	  16020	   3e94	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-11:56:11 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+22:51:27 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10704	     12	   1668	  12384	   3060	stm32f401re_uart_tx_it_dma.elf
+  13244	     16	   2760	  16020	   3e94	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-11:56:24 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+22:51:31 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10704	     12	   1668	  12384	   3060	stm32f401re_uart_tx_it_dma.elf
+  13244	     16	   2760	  16020	   3e94	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-11:57:09 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:02:47 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10704	     16	   1672	  12392	   3068	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-11:57:22 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:02:54 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10704	     16	   1672	  12392	   3068	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-11:58:34 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:03:22 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-11:58:37 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:03:26 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-11:58:58 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:00:09 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:01:35 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:04:19 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-12:01:39 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:04:22 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-12:02:35 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:04:55 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-12:02:40 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:04:59 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-12:15:52 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:05:49 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-12:15:56 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:05:53 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-12:17:07 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:07:56 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-12:17:10 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:07:59 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-12:17:51 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:08:30 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32f401re_uart_tx_it_dma.elf
  
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
 arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
 Finished building: stm32f401re_uart_tx_it_dma.list
  
-12:17:54 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:08:33 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  
-12:20:07 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  123 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:20:11 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+23:09:07 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
 make -j20 all 
 arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-  10712	     16	   1672	  12400	   3070	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:24:03 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:107:20: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-  107 |         data[10239]="\r";
-      |                    ^
-../Core/Src/main.c:108:20: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
-  108 |         data[10240]="\n";
-      |                    ^
-../Core/Src/main.c:125:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  125 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10760	     16	  11880	  22656	   5880	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:24:07 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10760	     16	  11880	  22656	   5880	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:26:44 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  126 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10740	     16	  11880	  22636	   586c	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:26:48 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10740	     16	  11880	  22636	   586c	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:27:13 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  126 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10740	     16	   2664	  13420	   346c	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:27:55 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  126 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10732	     16	   2664	  13412	   3464	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:28:00 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10732	     16	   2664	  13412	   3464	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:29:21 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  126 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10732	     16	   2664	  13412	   3464	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:29:24 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10732	     16	   2664	  13412	   3464	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:29:51 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  126 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10740	     16	  11880	  22636	   586c	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:29:56 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10740	     16	  11880	  22636	   586c	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-12:35:48 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:126:46: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
-  126 |                 HAL_UART_Transmit_IT(&huart2,data,buffer);
-      |                                              ^~~~
-      |                                              |
-      |                                              char *
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:747:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
-  747 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
-      |                                                                   ~~~~~~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "stm32f401re_uart_tx_it_dma.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\Elconics\Youtube Video\stm32_scratch_2_advance\Stm32_scratch2_advance\stm32f401re_uart_tx_it_dma\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f401re_uart_tx_it_dma.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: stm32f401re_uart_tx_it_dma.elf
- 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-arm-none-eabi-objdump -h -S stm32f401re_uart_tx_it_dma.elf  > "stm32f401re_uart_tx_it_dma.list"
-   text	   data	    bss	    dec	    hex	filename
-  10732	     16	   2664	  13412	   3464	stm32f401re_uart_tx_it_dma.elf
-Finished building: default.size.stdout
- 
-Finished building: stm32f401re_uart_tx_it_dma.list
- 
-12:35:51 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
-make -j20 all 
-arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10732	     16	   2664	  13412	   3464	stm32f401re_uart_tx_it_dma.elf
+  13260	     16	   2760	  16036	   3ea4	stm32f401re_uart_tx_it_dma.elf
 Finished building: default.size.stdout
  

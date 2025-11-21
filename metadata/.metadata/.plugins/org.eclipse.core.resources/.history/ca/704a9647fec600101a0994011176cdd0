@@ -61,13 +61,13 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-//void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
-//{
-//    if(huart->Instance == USART2)
-//    {
-//    	tx_flag = 1;     // Transmission finished
-//    }
-//}
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if(huart->Instance == USART2)
+    {
+    	tx_flag = 1;     // Transmission finished
+    }
+}
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
@@ -155,14 +155,14 @@ data[buffer-1]='\n';
 	//	    HAL_Delay(500);
 	//
 	//}
-	     // Doing in DMA mode
+
 			if (tx_flag)
 			{     tx_flag = 0;
 	         HAL_UART_Transmit_DMA(&huart2,(uint8_t *)data, buffer);
 			}
 
-		     HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-		     HAL_Delay(500);
+				    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+				    HAL_Delay(500);
 
   }
   /* USER CODE END 3 */
