@@ -1,0 +1,10 @@
+12:35:51 **** Incremental Build of configuration Debug for project stm32f401re_uart_tx_it_dma ****
+make -j20 all 
+arm-none-eabi-size  stm32f401re_uart_tx_it_dma.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10732	     16	   2664	  13412	   3464	stm32f401re_uart_tx_it_dma.elf
+Finished building: default.size.stdout
+ 
+
+12:35:51 Build Finished. 0 errors, 0 warnings. (took 207ms)
+

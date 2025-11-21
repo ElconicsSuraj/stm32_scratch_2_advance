@@ -40,9 +40,9 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-IWDG_HandleTypeDef hiwdg;
-
 UART_HandleTypeDef huart2;
+
+WWDG_HandleTypeDef hwwdg;
 
 /* USER CODE BEGIN PV */
 
@@ -52,7 +52,7 @@ UART_HandleTypeDef huart2;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
-static void MX_IWDG_Init(void);
+static void MX_WWDG_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -97,57 +97,33 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  PrintResetReason();
-  MX_IWDG_Init();
+  MX_WWDG_Init();
   /* USER CODE BEGIN 2 */
 
-
+  PrintResetReason();
 
   /* USER CODE END 2 */
-
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-	        // ← SHOW RESET CAUSE
-	    HAL_IWDG_Refresh(&hiwdg);   // Kick watchdog
-	    HAL_Delay(500);
-	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5,1);               // your code
-	    HAL_Delay(500);
-	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5,0);               // your code
-	    HAL_Delay(500);
+
     /* USER CODE BEGIN 3 */
+
+      // ← SHOW RESET CAUSE
+ // HAL_IWDG_Refresh(&hiwdg);   // Kick watchdog
+	  HAL_Delay(5);         // 5ms delay to enter refresh window
+	  HAL_WWDG_Refresh(&hwwdg);
+  //HAL_Delay(500);
+//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5,GPIO_PIN_SET);               // your code
+//  HAL_Delay(8);
+//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5,GPIO_PIN_RESET);               // your code
+//  HAL_Delay(8);
   }
   /* USER CODE END 3 */
 }
-
-void PrintResetReason(void)
-{
-    if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST))
-        printf("RESET REASON: Independent Watchdog (IWDG)\r\n");
-
-    if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST))
-        printf("RESET REASON: Window Watchdog (WWDG)\r\n");
-
-    if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST))
-        printf("RESET REASON: Software Reset\r\n");
-
-    if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST))
-        printf("RESET REASON: Power-On Reset\r\n");
-
-    if (__HAL_RCC_GET_FLAG(RCC_FLAG_PINRST))
-        printf("RESET REASON: Pin Reset (NRST)\r\n");
-
-    if (__HAL_RCC_GET_FLAG(RCC_FLAG_BORRST))
-        printf("RESET REASON: Brown-Out Reset\r\n");
-
-    // Clear flags after reading
-    __HAL_RCC_CLEAR_RESET_FLAGS();
-}
-
-
 
 /**
   * @brief System Clock Configuration
@@ -166,10 +142,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 16;
@@ -194,34 +169,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-}
-
-/**
-  * @brief IWDG Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_IWDG_Init(void)
-{
-
-  /* USER CODE BEGIN IWDG_Init 0 */
-
-  /* USER CODE END IWDG_Init 0 */
-
-  /* USER CODE BEGIN IWDG_Init 1 */
-
-  /* USER CODE END IWDG_Init 1 */
-  hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_16;
-  hiwdg.Init.Reload = 3749;
-  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN IWDG_Init 2 */
-
-  /* USER CODE END IWDG_Init 2 */
-
 }
 
 /**
@@ -254,6 +201,36 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
+
+}
+
+/**
+  * @brief WWDG Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_WWDG_Init(void)
+{
+
+  /* USER CODE BEGIN WWDG_Init 0 */
+
+  /* USER CODE END WWDG_Init 0 */
+
+  /* USER CODE BEGIN WWDG_Init 1 */
+
+  /* USER CODE END WWDG_Init 1 */
+  hwwdg.Instance = WWDG;
+  hwwdg.Init.Prescaler = WWDG_PRESCALER_8;
+  hwwdg.Init.Window = 80;
+  hwwdg.Init.Counter = 127;
+  hwwdg.Init.EWIMode = WWDG_EWI_DISABLE;
+  if (HAL_WWDG_Init(&hwwdg) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN WWDG_Init 2 */
+
+  /* USER CODE END WWDG_Init 2 */
 
 }
 
@@ -295,6 +272,58 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+
+void PrintResetReason(void)
+{
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST))
+        printf("RESET REASON: Independent Watchdog (IWDG)\r\n");
+
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_WWDGRST))
+        printf("RESET REASON: Window Watchdog (WWDG)\r\n");
+
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_SFTRST))
+        printf("RESET REASON: Software Reset\r\n");
+
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST))
+        printf("RESET REASON: Power-On Reset\r\n");
+
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_PINRST))
+        printf("RESET REASON: Pin Reset (NRST)\r\n");
+
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_BORRST))
+        printf("RESET REASON: Brown-Out Reset\r\n");
+
+    // Clear flags after reading
+    __HAL_RCC_CLEAR_RESET_FLAGS();
+}
+
+
+
+
+//For IWDG initalization function
+//static void MX_IWDG_Init(void)
+//{
+//
+//  /* USER CODE BEGIN IWDG_Init 0 */
+//
+//  /* USER CODE END IWDG_Init 0 */
+//
+//  /* USER CODE BEGIN IWDG_Init 1 */
+//
+//  /* USER CODE END IWDG_Init 1 */
+//  hiwdg.Instance = IWDG;
+//  hiwdg.Init.Prescaler = IWDG_PRESCALER_16;
+//  hiwdg.Init.Reload = 3749;
+//  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
+//  /* USER CODE BEGIN IWDG_Init 2 */
+//
+//  /* USER CODE END IWDG_Init 2 */
+//
+//}
 
 /* USER CODE END 4 */
 
